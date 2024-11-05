@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="bg-white px-20 py-6">
       <Flex justify="between" align="center">
-        <Text size="4" weight="light" className="tracking-[.25em]">
+        <Text size="4" weight="light" className="!tracking-[.25em]">
           CHICLU
         </Text>
         <nav>
