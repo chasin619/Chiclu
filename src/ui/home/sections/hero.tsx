@@ -6,7 +6,15 @@ import { Button } from "@/components/button";
 const HeroSection = () => {
   return (
     <section>
-      <Flex align="center" justify="between" maxWidth="1380px" mx="auto" px="8">
+      <Flex
+        align="center"
+        justify="between"
+        direction={{ initial: "column", xs: "column", md: "row" }}
+        maxWidth="1380px"
+        mx="auto"
+        px="8"
+        mt={{ initial: "6", md: "0" }}
+      >
         <Box>
           <Text className="text-primaryGray !tracking-[.4px] block text-[38px]">
             Florist Software to manage
@@ -21,7 +29,9 @@ const HeroSection = () => {
             Have your clients booked with just a few clicks
           </Text>
           <Button title="Start a Free Trial" customStyles="mt-4" />
-          <Text color="gray" my="8" className="block">Get started with a free 31-day trial.</Text>
+          <Text color="gray" my="8" className="block">
+            Get started with a free 31-day trial.
+          </Text>
         </Box>
         <Box>
           <Image src="/hero.jpg" alt="Hero Image" width="700" height="700" />

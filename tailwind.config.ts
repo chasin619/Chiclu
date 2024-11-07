@@ -16,6 +16,9 @@ const config: Config = {
         primaryGray: "#484848",
         orange: "#e6913f",
       },
+      screens: {
+        xs: "360px",
+      },
     },
   },
   plugins: [],
