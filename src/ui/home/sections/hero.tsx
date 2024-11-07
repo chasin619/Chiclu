@@ -1,6 +1,7 @@
-import { Box, Flex, Text } from "@radix-ui/themes";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import { Box, Flex, Text } from "@radix-ui/themes";
+import { Button } from "@/components/button";
 
 const HeroSection = () => {
   return (
@@ -13,6 +14,13 @@ const HeroSection = () => {
               Wedding
             </Text>
           </Text>
+          <Text size="5" color="gray" mt="4" className="block max-w-80">
+            Recipes, Sales, Booking Process, Communications, Efficiency
+          </Text>
+          <Text size="5" color="gray" my="4" className="block">
+            Have your clients booked with just a few clicks
+          </Text>
+          <Button title="Start a Free Trial" customStyles="mt-4" />
         </Box>
         <Box>
           <Image src="/hero.jpg" alt="Hero Image" width="700" height="700" />
