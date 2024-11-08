@@ -11,7 +11,7 @@ const Review = () => {
         direction="column"
         mx="auto"
         px="8"
-        py="9"
+        py="8"
         gap="6"
       >
         <Heading align="left" weight="medium" size="6" className="text-primaryGray">What Brides Say</Heading>
