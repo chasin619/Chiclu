@@ -33,8 +33,10 @@ const Gallery = () => {
             return (
               <Flex
                 key={index}
-                direction={index % 2 === 0 ? "row" : "row-reverse"}
-                className={`${description ? "gap-11" : "gap-28"}`}
+                className={`${
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                } ${description ? "md:gap-11" : "md:gap-28"} xs:flex-col-reverse xs:gap-6`}
+                align="center"
               >
                 {photoPath && (
                   <Image
@@ -42,19 +44,19 @@ const Gallery = () => {
                     alt="Public Recipe"
                     width={300}
                     height={300}
-                    className="rounded-full"
+                    className="rounded-full md:w-80 xs:w-56"
                     priority
                   />
                 )}
                 <Flex justify="center" direction="column">
-                  <Text className="text-primaryGray !tracking-[.4px] block text-4xl">
+                  <Text className="text-primaryGray !tracking-[.4px] block md:text-4xl xs:text-3xl">
                     {orangeText}{" "}
                     <Text as="span" className="text-orange" mt="1">
                       {title}
                     </Text>
                   </Text>
                   {description && (
-                    <Text size="3" color="gray" mt="4" className="max-w-80">
+                    <Text size="3" color="gray" mt="4" className="max-w-80 md:flex xs:hidden">
                       {description}
                     </Text>
                   )}
