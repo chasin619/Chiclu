@@ -2,6 +2,7 @@ import {
   GallerySection,
   HeroSection,
   ReviewSection,
+  ServicesSection,
   VideoSection,
 } from "@/ui/home/sections";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <ReviewSection />
       <VideoSection />
       <GallerySection />
+      <ServicesSection />
     </>
   );
 }
