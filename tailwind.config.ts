@@ -15,6 +15,7 @@ const config: Config = {
         foreground: "var(--foreground)",
         primaryGray: "#484848",
         orange: "#e6913f",
+        green: "#7EB5A7",
       },
       screens: {
         xs: "360px",
