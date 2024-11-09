@@ -2,7 +2,7 @@ import React from "react";
 
 interface ButtonProps {
   title: string;
-  customStyles: string;
+  customStyles?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ title, customStyles }) => {

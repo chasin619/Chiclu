@@ -1,6 +1,7 @@
 import {
   GallerySection,
   HeroSection,
+  PricingSection,
   ReviewSection,
   ServicesSection,
   VideoSection,
@@ -14,6 +15,7 @@ export default function Home() {
       <VideoSection />
       <GallerySection />
       <ServicesSection />
+      <PricingSection />
     </>
   );
 }
