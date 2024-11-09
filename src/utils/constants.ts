@@ -50,6 +50,33 @@ export const galleryData = [
   },
 ];
 
+export const softwareData = [
+  {
+    name: "Dynamic Proposal",
+    description:
+      "Save a lot of time with the dynamic proposal. Just work in the event editor. The software automatically makes all updates to the proposal. No need to fill any fields. Create a beautiful proposal with one click",
+    image: "/dynamic-proposal.jfif",
+  },
+  {
+    name: "Web Messenger",
+    description:
+      "Discuss the wedding details within each event. Add comments to arrangements. Share with messages and pictures one another to come to quite an agreement for each aspect",
+    image: "/web-messenger.jfif",
+  },
+  {
+    name: "Notifications",
+    description:
+      "Receive all brides' changes via updates and notifications in software and your email. Now you won't miss or forget anything",
+    image: "/notifications.jfif",
+  },
+  {
+    name: "Instant Event Editor",
+    description:
+      "The clients often ask for change or add something in the proposal? Edit the recipes right from the event. It allows you to be flexible and handle updates speedily.Provide the best customer service",
+    image: "/event-editor.jfif",
+  },
+];
+
 export const servicesData = [
   {
     title: "Report List",

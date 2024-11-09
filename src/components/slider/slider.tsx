@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Scrollbar, A11y, Autoplay } from "swiper/modules";
-import { Flex, Text } from "@radix-ui/themes";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -15,20 +15,11 @@ interface SliderProps<T> {
   slidesPerView?: number;
 }
 
-interface ReviewItem {
-  review: string;
-  clientName: string;
-}
-
-const Slider = <T extends ReviewItem>({
-  data,
-  renderItem,
-  slidesPerView = 3,
-}: SliderProps<T>) => {
+const Slider = <T,>({ data, renderItem, slidesPerView = 3 }: SliderProps<T>) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden h-96">
       <Swiper
         modules={[Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={slidesPerView}
@@ -57,7 +48,7 @@ const Slider = <T extends ReviewItem>({
           <SwiperSlide
             key={index}
             style={{
-              width: index === activeIndex ? "33.3%" : "33.3%",
+              width: "100%",
             }}
           >
             {renderItem(item, index)}
