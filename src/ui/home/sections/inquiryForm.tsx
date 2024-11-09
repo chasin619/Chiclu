@@ -10,10 +10,10 @@ const InquiryForm = () => {
         justify="between"
         maxWidth="1380px"
         mx="auto"
-        px="8"
-        py="8"
+        px="6"
+        py={{ initial: "0", md: "8" }}
         gap="6"
-        direction={{ initial: "column", md: "row" }}
+        direction={{ initial: "column-reverse", md: "row" }}
       >
         <Flex maxWidth={{ initial: "100%", md: "50%" }}>
           <Text

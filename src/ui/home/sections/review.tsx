@@ -13,7 +13,7 @@ const Review = () => {
         maxWidth="1380px"
         direction="column"
         mx="auto"
-        px="8"
+        px="6"
         py="8"
         gap="6"
       >

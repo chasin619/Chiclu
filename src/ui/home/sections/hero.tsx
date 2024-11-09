@@ -12,20 +12,33 @@ const HeroSection = () => {
         direction={{ initial: "column", xs: "column", md: "row" }}
         maxWidth="1380px"
         mx="auto"
-        px="8"
+        px="6"
         mt={{ initial: "6", md: "0" }}
       >
         <Box>
-          <Text className="text-primaryGray !tracking-[.4px] block text-[38px]">
+          <Text
+            as="p"
+            className="text-primaryGray !tracking-[.4px] md:text-[38px] xs:text-3xl"
+          >
             Florist Software to manage
-            <Text className="text-orange block !tracking-[.4px]" mt="1">
+            <Text as="p" className="text-orange !tracking-[.4px]" mt="1">
               Wedding
             </Text>
           </Text>
-          <Text size="5" color="gray" mt="4" className="block max-w-80">
+          <Text
+            size={{ initial: "4", md: "5" }}
+            color="gray"
+            mt="4"
+            className="block max-w-80"
+          >
             Recipes, Sales, Booking Process, Communications, Efficiency
           </Text>
-          <Text size="5" color="gray" my="4" className="block">
+          <Text
+            size={{ initial: "4", md: "5" }}
+            color="gray"
+            my="4"
+            className="block"
+          >
             Have your clients booked with just a few clicks
           </Text>
           <Button title="Start a Free Trial" customStyles="mt-4" />

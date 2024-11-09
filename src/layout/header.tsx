@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white md:px-20 xs:px-12 py-6">
+    <header className="bg-white md:px-20 xs:px-6 py-6">
       <Flex justify="between" align="center">
         <Text size="4" weight="light" className="!tracking-[.25em]">
           CHICLU

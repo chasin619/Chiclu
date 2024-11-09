@@ -10,7 +10,7 @@ const Video = () => {
         align="center"
         my="9"
         gap="4"
-        px="8"
+        px="6"
         maxWidth="1380px"
         width="100%"
       >
