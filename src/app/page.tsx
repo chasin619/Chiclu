@@ -2,6 +2,7 @@ import {
   AboutSoftwareSection,
   GallerySection,
   HeroSection,
+  InquiryFormSection,
   PricingSection,
   ReviewSection,
   ServicesSection,
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <HeroSection />
       <ReviewSection />
+      <InquiryFormSection />
       <VideoSection />
       <GallerySection />
       <AboutSoftwareSection />

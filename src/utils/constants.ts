@@ -112,3 +112,21 @@ export const servicesData = [
     image: "/docusign.png",
   },
 ];
+
+export const inquiryFormData = [
+  {
+    name: "Instead of the usual pdf questionnaire now you can send your bride a link or attach it to your website where she can:",
+  },
+  {
+    name: "Create her unique wedding design, using her inspirational pictures",
+  },
+  {
+    name: "Choose stylish arrangements, colors, flowers, inspirations from your gallery",
+  },
+  {
+    name: "Receive a fully customized wedding design.Make changes to the timeline and all the specifics of her perfect day",
+  },
+  {
+    name: "All at the convenience of her own home. Without calling, emailing,  meeting",
+  },
+];

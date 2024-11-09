@@ -5,7 +5,7 @@ import { servicesData } from "@/utils/constants";
 
 const Services = () => {
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center mt-16">
       <Flex
         direction="column"
         justify="center"
