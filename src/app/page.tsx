@@ -1,4 +1,5 @@
 import {
+  AboutSoftwareSection,
   GallerySection,
   HeroSection,
   PricingSection,
@@ -14,6 +15,7 @@ export default function Home() {
       <ReviewSection />
       <VideoSection />
       <GallerySection />
+      <AboutSoftwareSection />
       <ServicesSection />
       <PricingSection />
     </>

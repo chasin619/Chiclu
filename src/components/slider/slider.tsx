@@ -9,42 +9,29 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-const Slider = () => {
-  const [activeIndex, setActiveIndex] = useState<number>(0);
+interface SliderProps<T> {
+  data: T[];
+  renderItem: (item: T, index: number) => React.ReactNode;
+  slidesPerView?: number;
+}
 
-  const data = [
-    {
-      review: `Build your wedding feature is so amazing, it allowed me to create proposal and instantly see a quote in a few clicks …. 
-Super easy to use, and impressed by inquiry form.So up to date with technology. I loved seeing proposal after a few clicks, instead of waiting days for other florists to reply on my emails.`,
-      clientName: "Sarah Schmidt",
-    },
-    {
-      review: `Wow… such an easy platform, I was so impressed with design feature, I was able to add my inspirational images and choose everything needed for my wedding.`,
-      clientName: "Leila Kalckin",
-    },
-    {
-      review: `When I was searching for a wedding florist, I landed on CHICLU.COM  platform and immediately chose everything I needed for my wedding, I was able to see prices. And after florist sent me a confirmation I was ready to book. My wedding came out as I always dreamed.`,
-      clientName: "Julia Simon",
-    },
-    {
-      review: `I booked my wedding Florist only because it was super easy to update things inside the proposal itself, without even emailing for updates.`,
-      clientName: "Deborah Sing",
-    },
-    {
-      review: `I love detailed notes and descriptions of everything what I will be getting for my wedding. And I was so impressed when  received proposal from a florist with such a beautiful design board. I am a visual person and proposal helped me so much with visualization of my Wedding Day.`,
-      clientName: "Stephanie Reyes",
-    },
-    {
-      review: `Super fast and so beautiful proposal sold itself. Booked florist for my wedding in mAy with proposal builder feature.`,
-      clientName: "Anna Kim",
-    },
-  ];
+interface ReviewItem {
+  review: string;
+  clientName: string;
+}
+
+const Slider = <T extends ReviewItem>({
+  data,
+  renderItem,
+  slidesPerView = 3,
+}: SliderProps<T>) => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
     <div className="w-full overflow-hidden">
       <Swiper
         modules={[Pagination, Scrollbar, A11y, Autoplay]}
-        slidesPerView={4}
+        slidesPerView={slidesPerView}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         loop
         autoplay={{
@@ -73,18 +60,7 @@ Super easy to use, and impressed by inquiry form.So up to date with technology. 
               width: index === activeIndex ? "33.3%" : "33.3%",
             }}
           >
-            <Flex
-              direction="column"
-              minHeight="300px"
-              justify="between"
-              px="6"
-              className="border-l-2 border-[#e8994d]"
-            >
-              <Text size="3" color="gray" weight="light">
-                {item.review}
-              </Text>
-              <Text align="right">- {item.clientName}</Text>
-            </Flex>
+            {renderItem(item, index)}
           </SwiperSlide>
         ))}
       </Swiper>
