@@ -23,7 +23,7 @@ const Slider = <T,>({
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="w-full overflow-hidden min-h-80">
+    <div className="w-full overflow-hidden max-h-80">
       <Swiper
         modules={[Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={slidesPerView}

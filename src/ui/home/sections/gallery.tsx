@@ -44,7 +44,7 @@ const Gallery = () => {
                     alt="Public Recipe"
                     width={300}
                     height={300}
-                    className="rounded-full md:w-80 xs:w-56"
+                    className="rounded-xl md:w-80 xs:w-56"
                     priority
                   />
                 )}
