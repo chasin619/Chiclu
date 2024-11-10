@@ -47,7 +47,13 @@ const HeroSection = () => {
           </Text>
         </Box>
         <Box>
-          <Image src="/hero.jpg" alt="Hero Image" width="700" height="700" />
+          <Image
+            src="/hero.jpg"
+            alt="Hero Image"
+            width="700"
+            height="700"
+            className="xs:hidden md:block"
+          />
         </Box>
       </Flex>
     </section>

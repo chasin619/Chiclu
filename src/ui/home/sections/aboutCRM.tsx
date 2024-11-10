@@ -16,14 +16,15 @@ const AboutCRM = () => {
         gap="6"
         direction={{ initial: "column-reverse", md: "row" }}
       >
-        <Box className="bg-[#FBEBDE] rounded-full max-w-[600px]">
+        {/* <Box className="bg-[#FBEBDE] rounded-full max-w-[600px]"> */}
           <Image
             src="/inquiry-form.png"
             alt="Inquiry Form Image"
             width="700"
             height="700"
+            className="xs:hidden md:block"
           />
-        </Box>
+        {/* </Box> */}
         <Flex maxWidth={{ initial: "100%", md: "50%" }}>
           <Text
             className="text-primaryGray !tracking-[.4px]"

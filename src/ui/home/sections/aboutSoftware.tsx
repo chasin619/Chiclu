@@ -100,7 +100,7 @@ const AboutSoftware = () => {
                     height="200"
                     objectFit="cover"
                     objectPosition="top"
-                    className="max-h-52 w-full"
+                    className="max-h-52 w-full object-cover"
                   />
                   <Flex px="6" py="4" gap="4" direction="column">
                     <Text

@@ -1,3 +1,6 @@
+"use client";
+
+import { Slider } from "@/components/slider";
 import { galleryData } from "@/utils/constants";
 import { Flex, Text } from "@radix-ui/themes";
 import Image from "next/image";
@@ -27,43 +30,51 @@ const Gallery = () => {
             We provide finished gallery of flowers, items, colors, and recipes
           </Text>
         </Flex>
-        <Flex mt="7" direction="column" gap="6">
-          {galleryData.map((item, index) => {
-            const { title, description, orangeText, photoPath } = item;
-            return (
-              <Flex
-                key={index}
-                className={`${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                } ${description ? "md:gap-11" : "md:gap-28"} xs:flex-col-reverse xs:gap-6`}
-                align="center"
-              >
-                {photoPath && (
-                  <Image
-                    src={photoPath}
-                    alt="Public Recipe"
-                    width={300}
-                    height={300}
-                    className="rounded-xl md:w-80 xs:w-56"
-                    priority
-                  />
-                )}
-                <Flex justify="center" direction="column">
-                  <Text className="text-primaryGray !tracking-[.4px] block md:text-4xl xs:text-3xl">
-                    {orangeText}{" "}
-                    <Text as="span" className="text-orange" mt="1">
-                      {title}
-                    </Text>
-                  </Text>
-                  {description && (
-                    <Text size="3" color="gray" mt="4" className="max-w-80 md:flex xs:hidden">
-                      {description}
-                    </Text>
+        <Flex mt="7" direction="column" gap="6" width="100%">
+          <Slider
+            data={galleryData}
+            autoplay={false}
+            slidesPerView={3}
+            renderItem={(item, index) => {
+              const { title, description, orangeText, photoPath } = item;
+              return (
+                <Flex key={index} align="center" direction="column" maxWidth="350px">
+                  {photoPath && (
+                    <Image
+                      src={photoPath}
+                      alt="Public Recipe"
+                      width={300}
+                      height={300}
+                      className="rounded-xl md:w-80 xs:w-56"
+                      priority
+                    />
                   )}
+                  <Flex justify="center" direction="column">
+                    <Text as="p" mt="4" className="text-primaryGray !tracking-[.4px] md:text-3xl xs:text-2xl">
+                      {orangeText}{" "}
+                      <Text
+                        as="span"
+                        className="text-orange"
+                        mt="1"
+                      >
+                        {title}
+                      </Text>
+                    </Text>
+                    {description && (
+                      <Text
+                        size="3"
+                        color="gray"
+                        mt="4"
+                        className="max-w-80 md:flex xs:hidden"
+                      >
+                        {description}
+                      </Text>
+                    )}
+                  </Flex>
                 </Flex>
-              </Flex>
-            );
-          })}
+              );
+            }}
+          />
         </Flex>
       </Flex>
     </section>

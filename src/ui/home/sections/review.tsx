@@ -28,6 +28,7 @@ const Review = () => {
         <Slider
           data={customerReviewsData}
           slidesPerView={4}
+          showControls={false}
           renderItem={(item, index) => (
             <Flex
               key={index}

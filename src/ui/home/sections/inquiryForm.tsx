@@ -8,6 +8,7 @@ const InquiryForm = () => {
     <section>
       <Flex
         justify="between"
+        align="end"
         maxWidth="1380px"
         mx="auto"
         px="6"
@@ -36,14 +37,15 @@ const InquiryForm = () => {
             ))}
           </Text>
         </Flex>
-        <Box className="bg-[#E5EEEB] rounded-full max-w-[700px]">
+        {/* <Box className="bg-[#E5EEEB] rounded-full max-w-[700px]"> */}
           <Image
             src="/inquiry-form.png"
             alt="Inquiry Form Image"
             width="700"
             height="700"
+            className="xs:hidden md:block"
           />
-        </Box>
+        {/* </Box> */}
       </Flex>
     </section>
   );
