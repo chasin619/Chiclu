@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Flex, Text } from "@radix-ui/themes";
 import { servicesData } from "@/utils/constants";
+import { Slider } from "@/components/slider";
 
 const Services = () => {
   return (
@@ -34,6 +37,7 @@ const Services = () => {
             return (
               <Flex
                 key={index}
+                display={{ initial: "none", md: "flex" }}
                 direction="column"
                 align="center"
                 maxWidth="320px"
@@ -68,6 +72,45 @@ const Services = () => {
               </Flex>
             );
           })}
+          <Slider
+            data={servicesData}
+            renderItem={(service, index) => (
+              <Flex
+                key={index}
+                display={{ initial: "flex", md: "none" }}
+                direction="column"
+                align="center"
+                px="6"
+                py="4"
+                className="w-full sm:w-1/2 lg:w-1/3 rounded-lg shadow-lg transition-all hover:shadow-xl focus:outline-none"
+              >
+                <Image
+                  src={service.image}
+                  alt={`${service.title} icon`}
+                  width={60}
+                  height={60}
+                  objectFit="cover"
+                />
+
+                <Text
+                  as="p"
+                  mt="2"
+                  className="text-gray-700 !tracking-[.4px] md:text-2xl text-xl"
+                >
+                  {service.title}
+                </Text>
+                <Text
+                  as="p"
+                  color="gray"
+                  my="5"
+                  align="center"
+                  className="text-base"
+                >
+                  {service.description}
+                </Text>
+              </Flex>
+            )}
+          />
         </Flex>
       </Flex>
     </section>

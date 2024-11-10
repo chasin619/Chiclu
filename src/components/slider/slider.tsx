@@ -15,18 +15,22 @@ interface SliderProps<T> {
   slidesPerView?: number;
 }
 
-const Slider = <T,>({ data, renderItem, slidesPerView = 3 }: SliderProps<T>) => {
+const Slider = <T,>({
+  data,
+  renderItem,
+  slidesPerView = 3,
+}: SliderProps<T>) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
-    <div className="w-full overflow-hidden h-96">
+    <div className="w-full overflow-hidden min-h-80">
       <Swiper
         modules={[Pagination, Scrollbar, A11y, Autoplay]}
         slidesPerView={slidesPerView}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         loop
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         breakpoints={{
