@@ -36,7 +36,7 @@ const Gallery = () => {
             autoplay={false}
             slidesPerView={3}
             renderItem={(item, index) => {
-              const { title, description, orangeText, photoPath } = item;
+              const { title, orangeText, photoPath } = item;
               return (
                 <Flex key={index} align="center" direction="column" maxWidth="350px">
                   {photoPath && (
@@ -60,16 +60,6 @@ const Gallery = () => {
                         {title}
                       </Text>
                     </Text>
-                    {description && (
-                      <Text
-                        size="3"
-                        color="gray"
-                        mt="4"
-                        className="max-w-80 md:flex xs:hidden"
-                      >
-                        {description}
-                      </Text>
-                    )}
                   </Flex>
                 </Flex>
               );

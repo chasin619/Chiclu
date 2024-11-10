@@ -30,7 +30,6 @@ export const galleryData = [
   {
     orangeText: "Public",
     title: "Recipes",
-    description: `Browse the public recipes shared by other florists. Use them in your proposals or just add them to the gallery.`,
     photoPath: "/public-recipes.jpg",
   },
   {
