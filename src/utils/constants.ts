@@ -130,3 +130,21 @@ export const inquiryFormData = [
     name: "All at the convenience of her own home. Without calling, emailing,  meeting",
   },
 ];
+
+export const softwareCRMData = [
+  {
+    name: "The easiest tools for your events",
+  },
+  {
+    name: "Wedding templates builder and editor",
+  },
+  {
+    name: "Automated calculation of your profits for recipes and events",
+  },
+  {
+    name: "Recipe builder to manage design of bouquets",
+  },
+  {
+    name: "Your own gallery of recipes, flowers, colors, misc items",
+  },
+];
