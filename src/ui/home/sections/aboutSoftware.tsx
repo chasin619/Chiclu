@@ -29,7 +29,7 @@ const AboutSoftware = () => {
         direction="column"
         mx="auto"
         px="6"
-        py="8"
+        py="4"
         gap="6"
         className="w-full"
       >

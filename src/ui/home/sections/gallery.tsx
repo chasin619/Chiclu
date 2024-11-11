@@ -38,7 +38,12 @@ const Gallery = () => {
             renderItem={(item, index) => {
               const { title, orangeText, photoPath } = item;
               return (
-                <Flex key={index} align="center" direction="column" maxWidth="350px">
+                <Flex
+                  key={index}
+                  align="center"
+                  direction="column"
+                  maxWidth="350px"
+                >
                   {photoPath && (
                     <Image
                       src={photoPath}
@@ -50,13 +55,13 @@ const Gallery = () => {
                     />
                   )}
                   <Flex justify="center" direction="column">
-                    <Text as="p" mt="4" className="text-primaryGray !tracking-[.4px] md:text-3xl xs:text-2xl">
+                    <Text
+                      as="p"
+                      mt="4"
+                      className="text-primaryGray !tracking-[.4px] md:text-3xl xs:text-2xl"
+                    >
                       {orangeText}{" "}
-                      <Text
-                        as="span"
-                        className="text-orange"
-                        mt="1"
-                      >
+                      <Text as="span" className="text-orange" mt="1">
                         {title}
                       </Text>
                     </Text>

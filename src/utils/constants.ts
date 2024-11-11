@@ -124,10 +124,7 @@ export const inquiryFormData = [
   },
   {
     name: "Receive a fully customized wedding design.Make changes to the timeline and all the specifics of her perfect day",
-  },
-  {
-    name: "All at the convenience of her own home. Without calling, emailing,  meeting",
-  },
+  }
 ];
 
 export const softwareCRMData = [

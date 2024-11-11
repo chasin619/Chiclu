@@ -1,19 +1,29 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Flex, Text } from "@radix-ui/themes";
 import Image from "next/image";
 import { inquiryFormData } from "@/utils/constants";
 
 const InquiryForm = () => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const images = [
+    "/inquiry-form.png",
+    "/inquiry-form-2.png",
+    "/inquiry-form-3.png",
+    "/inquiry-form-4.png",
+  ];
+
   return (
     <section>
       <Flex
         justify="between"
-        align="end"
+        align="center"
         maxWidth="1380px"
         mx="auto"
         mt={{ initial: "8", md: "0" }}
         px="6"
-        py={{ initial: "0", md: "8" }}
+        py={{ initial: "0", md: "4" }}
         gap="6"
         direction={{ initial: "column-reverse", md: "row" }}
       >
@@ -31,15 +41,23 @@ const InquiryForm = () => {
                 key={index}
                 color="gray"
                 my="5"
-                className="text-base border-l-[3px] border-l-green pl-6"
+                size="4"
+                className={`border-l-[3px] border-l-green pl-6 ${
+                  activeIndex === index ? "opacity-100" : "opacity-45"
+                }`}
+                onMouseEnter={() => setActiveIndex(index)}
               >
                 {feature.name}
               </Text>
             ))}
+            <Text as="p" color="gray" mt="6" size="4">
+              All at the convenience of her own home. Without calling, emailing,
+              meeting
+            </Text>
           </Text>
         </Flex>
         <Image
-          src="/inquiry-form.png"
+          src={images[activeIndex]}
           alt="Inquiry Form Image"
           width="700"
           height="700"

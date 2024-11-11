@@ -8,7 +8,7 @@ const Video = () => {
         direction="column"
         justify="center"
         align="center"
-        my="9"
+        my="4"
         gap="4"
         px="6"
         maxWidth="1380px"
