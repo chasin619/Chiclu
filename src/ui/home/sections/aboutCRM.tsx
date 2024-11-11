@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
-import { Box, Flex, Text } from "@radix-ui/themes";
+import { Flex, Text } from "@radix-ui/themes";
 import { softwareCRMData } from "@/utils/constants";
 
 const AboutCRM = () => {
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const images = [
+    "/crm-1.jpg",
+    "/crm-2.jpg",
+    "/crm-3.jpg",
+    "/crm-4.jpg",
+    "/crm-5.jpg",
+  ];
+
   return (
     <section>
       <Flex
@@ -12,19 +23,17 @@ const AboutCRM = () => {
         maxWidth="1380px"
         mx="auto"
         px="6"
-        pt={{ initial: "0", md: "2" }}
+        pt={{ initial: "0", md: "9" }}
         gap="6"
         direction={{ initial: "column-reverse", md: "row" }}
       >
-        {/* <Box className="bg-[#FBEBDE] rounded-full max-w-[600px]"> */}
-          <Image
-            src="/inquiry-form.png"
-            alt="Inquiry Form Image"
-            width="700"
-            height="700"
-            className="xs:hidden md:block"
-          />
-        {/* </Box> */}
+        <Image
+          src={images[activeIndex]}
+          alt="Inquiry Form Image"
+          width="700"
+          height="700"
+          className="xs:hidden md:block"
+        />
         <Flex maxWidth={{ initial: "100%", md: "50%" }}>
           <Text
             className="text-primaryGray !tracking-[.4px]"
@@ -39,7 +48,10 @@ const AboutCRM = () => {
                 key={index}
                 color="gray"
                 my="5"
-                className="text-base border-l-[3px] border-l-orange pl-6"
+                className={`border-l-[3px] text-base border-l-orange pl-6 ${
+                  activeIndex === index ? "opacity-100" : "opacity-45"
+                }`}
+                onMouseEnter={() => setActiveIndex(index)}
               >
                 {feature.name}
               </Text>

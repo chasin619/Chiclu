@@ -41,16 +41,16 @@ const InquiryForm = () => {
                 key={index}
                 color="gray"
                 my="5"
-                size="4"
-                className={`border-l-[3px] border-l-green pl-6 ${
+                className={`text-base border-l-[3px] border-l-green pl-6 ${
                   activeIndex === index ? "opacity-100" : "opacity-45"
                 }`}
+                style={{ lineHeight: '28px' }}
                 onMouseEnter={() => setActiveIndex(index)}
               >
                 {feature.name}
               </Text>
             ))}
-            <Text as="p" color="gray" mt="6" size="4">
+            <Text as="p" color="gray" mt="6" size="3">
               All at the convenience of her own home. Without calling, emailing,
               meeting
             </Text>

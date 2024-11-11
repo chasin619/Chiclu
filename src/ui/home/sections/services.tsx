@@ -13,7 +13,7 @@ const Services = () => {
         direction="column"
         justify="center"
         align="center"
-        my="4"
+        my="9"
         gap="4"
         px="6"
         maxWidth="1380px"
