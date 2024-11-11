@@ -95,6 +95,7 @@ const AboutSoftware = () => {
                 >
                   <Image
                     src={item.image}
+                    unoptimized={true}
                     alt={item.name}
                     width="370"
                     height="200"

@@ -12,7 +12,7 @@ const AboutCRM = () => {
         maxWidth="1380px"
         mx="auto"
         px="6"
-        pt={{ initial: "0", md: "9" }}
+        pt={{ initial: "0", md: "2" }}
         gap="6"
         direction={{ initial: "column-reverse", md: "row" }}
       >

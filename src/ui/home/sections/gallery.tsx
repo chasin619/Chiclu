@@ -50,6 +50,7 @@ const Gallery = () => {
                       alt="Public Recipe"
                       width={300}
                       height={300}
+                      unoptimized={true}
                       className="rounded-xl md:w-80 xs:w-56"
                       priority
                     />
